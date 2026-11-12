@@ -29,4 +29,4 @@
 3. 確保所有內部連結一律使用相對路徑（例如：`../index.html` 或 `./pages/xxxx.html`）。
 4. 新增頁面後，主動回報修改的檔案清單與新增的頁面 URL 路徑。
 
-6.https://barry526.github.io/-AGENTS.md-CLAUDE.md/
+6.網頁連結https://barry526.github.io/-AGENTS.md-CLAUDE.md/
