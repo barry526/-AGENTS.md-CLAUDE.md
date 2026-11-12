@@ -28,3 +28,5 @@
 2. 檢查 `index.html` 的目錄清單，自動將新頁面的相對連結更新至首頁列表中。
 3. 確保所有內部連結一律使用相對路徑（例如：`../index.html` 或 `./pages/xxxx.html`）。
 4. 新增頁面後，主動回報修改的檔案清單與新增的頁面 URL 路徑。
+
+6.https://barry526.github.io/-AGENTS.md-CLAUDE.md/
