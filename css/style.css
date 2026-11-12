@@ -1,0 +1,403 @@
+
+/* =====================================
+   Engineering Knowledge Base
+   Theme: Dark Technology
+===================================== */
+
+:root {
+    --primary: #0f172a;
+    --secondary: #1e293b;
+    --card: #1e293b;
+    --background: #f8fafc;
+    --accent: #2563eb;
+    --accent-light: #60a5fa;
+
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #334155;
+
+    --radius: 12px;
+    --transition: 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans TC",
+        sans-serif;
+
+    background: var(--primary);
+    color: var(--text);
+
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ===== Navigation ===== */
+
+.navbar {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent-light);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-light);
+}
+
+/* ===== Container ===== */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 48px 24px;
+}
+
+/* ===== Hero ===== */
+
+.hero {
+    padding: 70px 30px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(37, 99, 235, 0.22),
+            transparent 65%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: var(--accent-light);
+    border: 1px solid var(--accent);
+    border-radius: 30px;
+    padding: 5px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/* ===== Section ===== */
+
+.section-title {
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.section-title::before {
+    content: "";
+    display: inline-block;
+
+    width: 4px;
+    height: 24px;
+
+    background: var(--accent);
+    margin-right: 12px;
+    vertical-align: middle;
+
+    border-radius: 4px;
+}
+
+/* ===== Cards ===== */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: var(--secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 26px;
+
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card-link {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-link:hover {
+    color: white;
+}
+
+/* ===== Article ===== */
+
+.article-header {
+    padding: 55px 0 35px;
+    border-bottom: 1px solid var(--border);
+}
+
+.article-category {
+    color: var(--accent-light);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.article-header h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.article-content {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px 24px 80px;
+}
+
+.article-content h2 {
+    color: white;
+    font-size: 24px;
+    margin: 40px 0 18px;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent);
+}
+
+.article-content h3 {
+    color: var(--accent-light);
+    font-size: 19px;
+    margin: 25px 0 12px;
+}
+
+.article-content p {
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.article-content li {
+    margin-bottom: 8px;
+}
+
+.article-content strong {
+    color: white;
+}
+
+/* ===== Info Box ===== */
+
+.info-box {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.5);
+    border-radius: 8px;
+
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.info-box p {
+    margin: 0;
+}
+
+/* ===== Code ===== */
+
+pre {
+    background: #020617;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    padding: 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+code {
+    font-family: Consolas, monospace;
+    color: #93c5fd;
+}
+
+/* ===== Table ===== */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th,
+td {
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+td {
+    background: var(--secondary);
+}
+
+/* ===== Back Button ===== */
+
+.back-link {
+    display: inline-block;
+    color: var(--accent-light);
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+/* ===== Footer ===== */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 850px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .container {
+        padding: 35px 18px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-content {
+        padding: 30px 18px 60px;
+    }
+}
